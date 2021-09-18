@@ -9,7 +9,7 @@
 
     <li class="list-group-item active">
 
-        <strong>Total :</strong>{{ cartTotal | currency: 'AUD'}}
+        <strong>Total :</strong>{{ cartTotal$ | async | currency: 'AUD'}}
         <span>{{itemTotal}}</span>
         
     </li>

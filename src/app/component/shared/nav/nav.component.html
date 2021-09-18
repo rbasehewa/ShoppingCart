@@ -35,7 +35,7 @@
         <div class="item-cart">
             <button routerLink="checkout" class="btn btn-primary">
                 <i class="fas fa-shopping-cart fa"></i>
-               {{totalItem}}
+               {{cartTotal$ | async}}
                 <h5>Cart</h5>
             </button>
            

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { CartService } from 'src/app/services/cart.service';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { addToCart } from 'src/app/cart.actions';
 
 @Component({
   selector: 'app-cart',
@@ -12,12 +15,14 @@ export class CartComponent implements OnInit {
 
   cartItems: any = [];
 
-  cartTotal = 0;
-
   itemTotal = 0;
- 
+  cartTotal$: Observable<number>;
 
-  constructor(private msg: MessengerService) { }
+  constructor(private msg: MessengerService, private store: Store<{ cartTotal: number }>) { 
+
+    this.cartTotal$ = store.select('cartTotal');
+
+  }
 
   ngOnInit(): void {
 
@@ -48,9 +53,9 @@ export class CartComponent implements OnInit {
       })
     }
 
-    this.cartTotal = 0
     this.itemTotal = 0
-    this.cartItems.forEach(item  => { this.cartTotal += (item.qty * item.price)})
+
+    this.store.dispatch(addToCart({amount: product.price}));
 
     this.cartItems.forEach(item  => { this.itemTotal += (item.qty )})
 
