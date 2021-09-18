@@ -1,0 +1,23 @@
+<div class="cart-item">
+<table>
+    <thead>
+        
+            <th>Name</th>
+            <th>Quntity</th>
+            <!-- <th>Total</th> -->
+            <th>Action</th>
+        
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ cartItem.productName }}</td>
+            <td>{{ cartItem.qty }}</td>
+            <!-- <td>{{ (cartItem.qty * cartItem.price) | currency:'AUD'}}</td> -->
+            <td>
+                <!-- <button (click)="removeItem(item)"  class="btn btn-danger"><i class="fas fa-trash-alt"></i></button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+    
+</div>

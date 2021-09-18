@@ -15,16 +15,21 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2017",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "module": "es2020",
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "allowSyntheticDefaultImports": true
   }
 }

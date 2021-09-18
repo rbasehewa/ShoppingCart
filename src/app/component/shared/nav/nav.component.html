@@ -1,0 +1,49 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <i class="fab fa-product-hunt fa-3x" [routerLink]="['/shop']"></i>
+                <h5>ALL PRODUCTS</h5>
+                
+            </a>
+        </div>
+        <div class="item">
+            <a>
+                <i class="fa fa-male fa-3x" aria-hidden="true"></i>
+                <h5>MEN</h5>
+                
+            </a>
+        </div>
+        <div class="item">
+                <i class="fa fa-female fa-3x" aria-hidden="true"></i>
+                <h5>WOMEN</h5>
+        </div>
+        <div class="item">
+                <i class="fas fa-child fa-3x"></i>
+                <h5>KIDS & BABY</h5>
+        </div>
+        <div class="item">
+                <i class="fa fa-home fa-3x" aria-hidden="true"></i>
+                <h5>HOME & LIFESTYLE</h5>
+        </div>
+        <div class="item">
+                <i class="fas fa-child fa-3x"></i>
+                <h5>TOYS & GAMES</h5>
+        </div>
+
+
+        <div class="item-cart">
+            <button routerLink="checkout" class="btn btn-primary">
+                <i class="fas fa-shopping-cart fa"></i>
+               {{totalItem}}
+                <h5>Cart</h5>
+            </button>
+           
+        </div>
+
+    </div>
+
+</div>
+
+
+
