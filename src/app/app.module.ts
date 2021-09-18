@@ -17,6 +17,8 @@ import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { PageNotFoundComponent } from './component/shared/page-not-found/page-not-found.component';
 import { CheckoutComponent } from './component/shopping-cart/checkout/checkout.component';
+import { StoreModule } from '@ngrx/store';
+import { cartReducer } from './cart.reducer';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { CheckoutComponent } from './component/shopping-cart/checkout/checkout.c
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forRoot({ cartTotal: cartReducer })
 
   ],
   providers: [],
