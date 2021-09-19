@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { MessengerService } from 'src/app/services/messenger.service';
-import { CartService } from 'src/app/services/cart.service';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { addToCart } from 'src/app/cart.actions';
@@ -11,6 +10,10 @@ import { addToCart } from 'src/app/cart.actions';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
+
+/**
+ * This is the cart component...
+ */
 export class CartComponent implements OnInit {
 
   cartItems: any = [];
@@ -19,9 +22,7 @@ export class CartComponent implements OnInit {
   cartTotal$: Observable<number>;
 
   constructor(private msg: MessengerService, private store: Store<{ cartTotal: number }>) { 
-
     this.cartTotal$ = store.select('cartTotal');
-
   }
 
   ngOnInit(): void {
@@ -32,6 +33,10 @@ export class CartComponent implements OnInit {
     })
   }
 
+  /**
+   * Add product to cart.
+   * @param product 
+   */
   addProductToCart(product: Product){
 
     let productExists = false;
@@ -44,7 +49,10 @@ export class CartComponent implements OnInit {
       }
     }
 
-
+  /**
+   * Add product to cart.
+   * @method push
+   */
     if(!productExists){
       this.cartItems.push({
         productName : product.name,
@@ -54,9 +62,7 @@ export class CartComponent implements OnInit {
     }
 
     this.itemTotal = 0
-
     this.store.dispatch(addToCart({amount: product.price}));
-
     this.cartItems.forEach(item  => { this.itemTotal += (item.qty )})
 
 

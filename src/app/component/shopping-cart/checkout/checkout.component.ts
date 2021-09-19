@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
 import { FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-checkout',
@@ -8,11 +8,7 @@ import { FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
-
-
   CheckoutForm: FormGroup
-
-
   constructor(private builder: FormBuilder) { }
 
   ngOnInit(): void {
@@ -21,21 +17,19 @@ export class CheckoutComponent implements OnInit {
 
   buildForm(){
     this.CheckoutForm = this.builder.group({
-      firstName: ['',Validators.required],
-      email: ['',[Validators.required,Validators.email]],
-      confirmEmail: ['',[Validators.required,Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern('[- +()0-9]+')]]
-      
+      fname: ['', Validators.required],
+      lastName: [''],
+      phone: ['', [Validators.required,  Validators.pattern('^((\\+61-?)|0)?[0-9]{9}$')]],
+      email: ['', [Validators.compose([Validators.required, Validators.email])]],
+      confirmEmail: ['', [Validators.compose([Validators.required, Validators.email])]],
+      address: [''],
     })
   }
-
+  /**
+   * Outout from console.
+   * @function CheckoutForm 
+   */
   checkout(){
     console.log(this.CheckoutForm.value)
   }
-
-
-
-
-
-
 }

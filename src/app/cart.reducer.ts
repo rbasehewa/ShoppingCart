@@ -3,10 +3,12 @@ import { addToCart, removeFromCart, reset } from './cart.actions';
 
 export const initialState = 0;
 
+  // /**
+  //  * Define a reducer function for add to cart
+  //  */
 const _cartReducer = createReducer(
   initialState,
   on(addToCart, (state, {amount}) => state + amount),
-  on(removeFromCart, (state) => state - 1),
   on(reset, (state) => 0)
 );
 
