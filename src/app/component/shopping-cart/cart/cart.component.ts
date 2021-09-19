@@ -22,9 +22,7 @@ export class CartComponent implements OnInit {
   cartTotal$: Observable<number>;
 
   constructor(private msg: MessengerService, private store: Store<{ cartTotal: number }>) { 
-
     this.cartTotal$ = store.select('cartTotal');
-
   }
 
   ngOnInit(): void {
@@ -51,7 +49,10 @@ export class CartComponent implements OnInit {
       }
     }
 
-
+  /**
+   * Add product to cart.
+   * @method push
+   */
     if(!productExists){
       this.cartItems.push({
         productName : product.name,
@@ -61,9 +62,7 @@ export class CartComponent implements OnInit {
     }
 
     this.itemTotal = 0
-
     this.store.dispatch(addToCart({amount: product.price}));
-
     this.cartItems.forEach(item  => { this.itemTotal += (item.qty )})
 
 

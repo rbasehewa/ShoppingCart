@@ -4,20 +4,18 @@
             <div class="card-header text-center">
                 <h3>Checkout</h3>
             </div>
-                <div class="card-body">
-                    <form [formGroup]="CheckoutForm" (ngSubmit)="checkout()">
-
-                        
+            <div class="card-body">
+                    <form [formGroup]="CheckoutForm" (ngSubmit)="checkout()">  
                         <div class="form-group">
                             <label for="fname">First Name</label>
                             <input
-                        id="fname"
-                        class="form-control"
-                        [ngClass]="{ 'is-invalid': CheckoutForm.get('fname')?.touched && CheckoutForm.get('fname')?.invalid }"
-                        formControlName="fname"
-                        />
-                        <span class="invalid-feedback">Name can't be blank.</span>
-                    </div>
+                                id="fname"
+                                class="form-control"
+                                [ngClass]="{ 'is-invalid': CheckoutForm.get('fname')?.touched && CheckoutForm.get('fname')?.invalid }"
+                                formControlName="fname"
+                            />
+                            <span class="invalid-feedback">Name can't be blank.</span>
+                        </div>
 
                         <div class="form-group">
                             <label for="lname">Last Name</label>
@@ -37,8 +35,7 @@
                               <span *ngIf="CheckoutForm.get('email')?.hasError('required')">Email can't be blank.</span>
                               <span *ngIf="CheckoutForm.get('email')?.hasError('email')">Email must be valid.</span>
                             </span>
-                          </div>
-
+                        </div>
                         
                         <div class="form-group">
                             <label for="confirmEmail">Confirm Email</label>
@@ -53,8 +50,7 @@
                                 <span *ngIf="CheckoutForm.get('confirmEmail')?.hasError('required')">Confirm Email can't be blank.</span>
                                 <span *ngIf="CheckoutForm.get('confirmEmail')?.hasError('email')">Email must be valid.</span>
                             </span>
-                        </div>
-                        
+                        </div>                      
                     
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
@@ -70,14 +66,12 @@
                     
                         <div class="form-group">
                             <label for="address">Address</label>
-                            <textarea  id="address" type="textarea" class="form-control" formControlName="address" rows="4" cols="30">
-                                </textarea>
+                            <textarea  id="address" type="textarea" class="form-control" formControlName="address" rows="4" cols="30"> </textarea>
                         </div>
-
                         <button class="btn btn-primary btn-block" [disabled]="CheckoutForm.invalid">Submit</button>
                     
                     </form>
-                </div>
+            </div>
         </div>
     </div>
 </div>

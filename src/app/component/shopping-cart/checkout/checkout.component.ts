@@ -8,11 +8,7 @@ import { FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
-
-
   CheckoutForm: FormGroup
-
-
   constructor(private builder: FormBuilder) { }
 
   ngOnInit(): void {
@@ -29,14 +25,11 @@ export class CheckoutComponent implements OnInit {
       address: [''],
     })
   }
-
+  /**
+   * Outout from console.
+   * @function CheckoutForm 
+   */
   checkout(){
     console.log(this.CheckoutForm.value)
   }
-
-
-
-
-
-
 }
