@@ -15,9 +15,6 @@ export class NavComponent implements OnInit {
     this.cartTotal$ = this.store.select('cartTotal');
   }
 
-  ngOnInit(): void {
-    
-    
-  }
+  ngOnInit(): void {}
 
 }
