@@ -13,11 +13,17 @@ export class MessengerService {
   subject = new Subject()
 
   constructor() { }
+
+/**
+ * This is send message and call by product item -> Observarble
+ */
   sendMessage(product){
-
-    this.subject.next(product)
+    this.subject.next(product) // trigerring event (one product)
+    
   }
-
+/**
+ * This is get message all by inside the cart component -> sender (trigger)
+ */
   getMessage(){
     return this.subject.asObservable()
   }

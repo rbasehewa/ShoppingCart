@@ -10,12 +10,18 @@ export class ProductService {
   products;
 
   constructor() {
+
+    // popolates products from local storage
     this.products = data;
 
    }
 
+/**
+ * This is the getProducts return products
+ */
+
   getProducts(): Product[]{
-    //popoulate prodcuts from json file and return observable
+    //return all the products
     return this.products;
   }
 
