@@ -9,7 +9,7 @@ export class Product {
     description: string;
     image: string;
     price: number;
-    availability: boolean;
+    available: boolean;
 
     // constructor(id  , name , description= '', price = 0, qty  ,availability , image ="assets/img/basic-hoodie.jpg" ){
 
