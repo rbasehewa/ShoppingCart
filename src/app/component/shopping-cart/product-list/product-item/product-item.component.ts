@@ -12,7 +12,6 @@ export class ProductItemComponent implements OnInit {
 
   //this is input decorator as parent component which we can access our template
   @Input() productItem: Product;
-
   constructor(private msg: MessengerService) { }
 
   ngOnInit(): void {
@@ -25,8 +24,7 @@ export class ProductItemComponent implements OnInit {
 
   handleAddToCart(){
     // send the message with the current product item inside the product item component
-  this.msg.sendMessage(this.productItem)
-    
-}
+     this.msg.sendMessage(this.productItem)
+  }
 
 }
