@@ -9,15 +9,14 @@
             type="button"
             class="btn btn-sm btn-primary product-btn"
             (click)="handleAddToCart()"
-            >
-            Add to Cart
-            <!-- {{productItem.availability = 'false' ? 'Add to Cart' : 'Sold Out '}} -->
+            [disabled]="productItem.available ? false : true"
+            >Add to Cart
             </button>
-          
-            <button type="button" class="btn btn-sm btn-outline-secondary product-btn">View Details</button>
-
-         
-
+            <button type="button" 
+            class="btn btn-outline-danger 
+            product-btn"
+            [disabled]="productItem.available ? true : false"
+            >Sold Out</button>
         </div>
         <strong>{{ productItem.price | currency:'AUD'}}</strong>
       </div>
