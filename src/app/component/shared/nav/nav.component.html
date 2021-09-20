@@ -35,7 +35,7 @@
         <div class="item-cart">
             <button  routerLink="checkout" class="btn btn-primary ">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-               {{cartTotal$ | async}}
+               {{cartTotal$ | async | currency: 'AUD'}}
                 <h5>Cart</h5>
             </button>
            
