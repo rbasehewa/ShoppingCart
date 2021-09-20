@@ -32,4 +32,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 * If product is not available, Add to cart button will change it to Out of store
 * UI needs to change more user friendly wise
 * Cart page will bring it to checkout page
+* Mobile responsive
 <p>

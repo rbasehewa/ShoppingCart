@@ -9,13 +9,19 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductListComponent implements OnInit {
 
+  // array of products which is blank array to start
   productsList: Product[] = []
-
+  // dependency injection of product service
   constructor(private productService: ProductService ) { }
 
+  /**
+ * ngOnInit method will get fire when the html ready 
+ */
+
   ngOnInit() {
+    // we are loading all the products to the productlist variable
     this.productsList = this.productService.getProducts()
-   
+
   }
 
 }

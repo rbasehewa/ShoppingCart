@@ -5,12 +5,19 @@
       <p class="card-text">{{productItem.description}}</p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <button 
-          type="button"
-          class="btn btn-sm btn-primary product-btn"
-          (click)="handleAddToCart()"
-          >Add to Cart</button>
-          <button type="button" class="btn btn-sm btn-outline-secondary product-btn">View Details</button>
+            <button 
+            type="button"
+            class="btn btn-sm btn-primary product-btn"
+            (click)="handleAddToCart()"
+            >
+            Add to Cart
+            <!-- {{productItem.availability = 'false' ? 'Add to Cart' : 'Sold Out '}} -->
+            </button>
+          
+            <button type="button" class="btn btn-sm btn-outline-secondary product-btn">View Details</button>
+
+         
+
         </div>
         <strong>{{ productItem.price | currency:'AUD'}}</strong>
       </div>

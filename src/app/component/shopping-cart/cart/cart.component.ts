@@ -12,7 +12,7 @@ import { addToCart } from 'src/app/cart.actions';
 })
 
 /**
- * This is the cart component...
+ * This is the cart component is Observable messanger service
  */
 export class CartComponent implements OnInit {
 
@@ -27,6 +27,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
 
+    // get message is observarble so we have to subscribition will be activate
     this.msg.getMessage().subscribe((product : any) => {
       // console.log(product);
       this.addProductToCart(product)
@@ -41,6 +42,7 @@ export class CartComponent implements OnInit {
 
     let productExists = false;
 
+// check the product is repating or not
     for(let i in this.cartItems){
       if(this.cartItems[i].productName === product.name){
         this.cartItems[i].qty++
@@ -64,6 +66,7 @@ export class CartComponent implements OnInit {
     this.itemTotal = 0
     this.store.dispatch(addToCart({amount: product.price}));
     this.cartItems.forEach(item  => { this.itemTotal += (item.qty )})
+    
 
 
    }
