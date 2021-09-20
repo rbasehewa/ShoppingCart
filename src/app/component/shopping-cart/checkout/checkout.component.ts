@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { reset } from 'src/app/cart.actions';
 
 
 @Component({
@@ -17,13 +18,14 @@ export class CheckoutComponent implements OnInit {
 
   buildForm(){
     this.CheckoutForm = this.builder.group({
-      fname: ['', Validators.required],
+      firstname: ['', Validators.required],
       lastName: [''],
       phone: ['', [Validators.required,  Validators.pattern('^((\\+61-?)|0)?[0-9]{9}$')]],
       email: ['', [Validators.compose([Validators.required, Validators.email])]],
       confirmEmail: ['', [Validators.compose([Validators.required, Validators.email])]],
       address: [''],
     })
+    
   }
   /**
    * Outout from console.
@@ -31,5 +33,6 @@ export class CheckoutComponent implements OnInit {
    */
   checkout(){
     console.log(this.CheckoutForm.value)
+    this.CheckoutForm.reset();
   }
 }
