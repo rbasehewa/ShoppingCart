@@ -11,6 +11,8 @@ export class ProductListComponent implements OnInit {
 
   // array of products which is blank array to start
   productsList: Product[] = []
+
+
   // dependency injection of product service
   constructor(private productService: ProductService ) { }
 
@@ -20,6 +22,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     // we are loading all the products to the productlist variable
+    console.log(this.productService.getProducts())
     this.productsList = this.productService.getProducts()
 
   }
