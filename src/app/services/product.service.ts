@@ -21,7 +21,8 @@ export class ProductService {
  */
 
   getProducts(): Product[]{
-    //return all the products
+    //return all the products 
+    // return observarable rather than a variable
     return this.products;
   }
 
