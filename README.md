@@ -34,3 +34,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 * Cart page will bring it to checkout page
 * Mobile responsive
 <p>
+
+<!-- ![alt text](http://url/to/img.png) -->
