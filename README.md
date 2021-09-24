@@ -35,4 +35,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 * Mobile responsive
 <p>
 
-<!-- ![alt text](http://url/to/img.png) -->
+![alt text](https://github.com/rbasehewa/ShoppingCart/blob/master/src/assets/img/layout.jpg)
