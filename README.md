@@ -13,8 +13,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Current integrated
 <p>
 
-* Add products to the cart
-* Checkout page integrate
+* Add products to the cart - done
+* Checkout page integrate - done
 * checkout page phone number and email validation
 * Checkout page will send the object
 * Ngrx store define and able to integrate cart amount
