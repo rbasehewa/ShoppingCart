@@ -4,6 +4,11 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+/**
+ * Main root
+ */
+
 export class AppComponent {
   title = 'ShoppingCart';
 }
