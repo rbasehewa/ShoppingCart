@@ -16,6 +16,11 @@ export class CheckoutComponent implements OnInit {
     this.buildForm();
   }
 
+
+  /**
+   * Buidlform validation
+   */
+
   buildForm(){
     this.CheckoutForm = this.builder.group({
       firstname: ['', Validators.required],
