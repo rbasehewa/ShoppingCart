@@ -36,3 +36,19 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 <p>
 
 <!-- ![alt text](http://url/to/img.png) -->
+
+## Folder structure 
+
+###  Src/App
+
+Components
+*   Shared
+    *  	Header
+    *   Nav
+    *   Footer
+*   Shopping Cart
+    *   ProductList
+        *   Product Item
+    *   Cart
+        *   Cart Item
+*   Checkout
