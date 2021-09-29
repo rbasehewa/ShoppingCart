@@ -55,4 +55,4 @@ Components
 
 ## few shorts reviewing final product
 
-![alt text](https://github.com/rbasehewa/ShoppingCart/tree/master/src/assets/img/readmeImg/layout.PNG?raw=true)
+![Layout](https://github.com/rbasehewa/ShoppingCart/tree/master/src/assets/img/readmeImg/layout.PNG)
