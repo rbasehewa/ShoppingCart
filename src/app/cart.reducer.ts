@@ -15,3 +15,13 @@ const _cartReducer = createReducer(
 export function cartReducer(state, action) {
   return _cartReducer(state, action);
 }
+
+const _cartRemover = createReducer(
+  initialState,
+  on(removeFromCart, (state) => state - 1),
+  on(reset, (state) => 0)
+);
+
+export function cartRemover(state, action) {
+  return _cartRemover(state, action);
+}

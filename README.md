@@ -52,3 +52,7 @@ Components
     *   Cart
         *   Cart Item
 *   Checkout
+
+## few shorts reviewing final product
+
+![Layout](https://github.com/rbasehewa/ShoppingCart/tree/master/src/assets/img/readmeImg/layout.PNG)

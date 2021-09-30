@@ -66,8 +66,19 @@ export class CartComponent implements OnInit {
     this.itemTotal = 0
     this.store.dispatch(addToCart({amount: product.price}));
     this.cartItems.forEach(item  => { this.itemTotal += (item.qty )})
-    
-
 
    }
+
+
+   removeCartItem(product: Product){
+     this.cartItems.map((index:any)=>{
+       if(product.name === product.name){
+         this.cartItems.splice(index,1);
+       }
+     })
+
+   }
+
+
+
 }
