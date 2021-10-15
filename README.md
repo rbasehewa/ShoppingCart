@@ -46,5 +46,9 @@ Components
 *   Checkout
 
 ## few shorts reviewing final product
-
-![Layout](https://github.com/rbasehewa/ShoppingCart/tree/master/src/assets/img/readmeImg/layout.PNG)
+  
+![Header](https://github.com/rbasehewa/ShoppingCart/blob/readme_todo_tasks/src/externalImg/header.PNG)
+  
+  ![Body](https://github.com/rbasehewa/ShoppingCart/blob/readme_todo_tasks/src/externalImg/body.PNG)
+  
+    ![Cart](https://github.com/rbasehewa/ShoppingCart/blob/readme_todo_tasks/src/externalImg/cart.PNG)
