@@ -51,4 +51,6 @@ Components
   
   ![Body](https://github.com/rbasehewa/ShoppingCart/blob/readme_todo_tasks/src/externalImg/body.PNG)
   
-    ![Cart](https://github.com/rbasehewa/ShoppingCart/blob/readme_todo_tasks/src/externalImg/cart.PNG)
+  ![Body](https://github.com/rbasehewa/ShoppingCart/blob/readme_todo_tasks/src/externalImg/cart.PNG)
+  
+  
