@@ -1,22 +1,26 @@
-.card-top{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: .25rem;
- }
+.card-top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
 
- .item{
-     margin: 0px 15px;
-     text-align: center;
- }
+.item {
+  margin: 10px 15px;
+  text-align: center;
+  font-size: large;
+  gap: 10px;
+  flex: 1;
+}
 
- .item-cart{
-    margin: 0px 250px;
-    text-align: center;
-    float: right;
+.item-cart {
+  margin: 10px 20px;
+  text-align: center;
+  font-size: large;
+  flex: 1;
 }
