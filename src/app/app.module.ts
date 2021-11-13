@@ -18,7 +18,7 @@ import { RegisterComponent } from './component/register/register.component';
 import { PageNotFoundComponent } from './component/shared/page-not-found/page-not-found.component';
 import { CheckoutComponent } from './component/shopping-cart/checkout/checkout.component';
 import { StoreModule } from '@ngrx/store';
-import { cartReducer } from './cart.reducer';
+import { cartReducer } from 'src/app/store/cart.reducer';
 
 @NgModule({
   declarations: [

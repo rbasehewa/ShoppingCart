@@ -3,7 +3,7 @@ import { Product } from 'src/app/models/product';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { addToCart } from 'src/app/cart.actions';
+import { addToCart } from 'src/app/store/cart.actions';
 
 @Component({
   selector: 'app-cart',

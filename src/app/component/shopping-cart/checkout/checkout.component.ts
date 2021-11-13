@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators} from '@angular/forms';
-import { reset } from 'src/app/cart.actions';
+import { reset } from 'src/app/store/cart.actions';
 
 
 @Component({
