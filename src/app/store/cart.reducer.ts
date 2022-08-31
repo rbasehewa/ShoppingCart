@@ -1,4 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
+import { RegisterComponent } from '../component/register/register.component';
+import { AuthStateInterface } from '../types/authState.interface';
 import { addToCart, removeFromCart, reset } from './cart.actions';
 
 export const initialState = 0;
@@ -25,3 +27,12 @@ const _cartRemover = createReducer(
 export function cartRemover(state, action) {
   return _cartRemover(state, action);
 }
+
+// intilize the interface for register
+
+const firstInitialState: AuthStateInterface = {
+
+  isSubmitting: false
+}
+
+// const authReducer = createReducer(firstInitialState, on(RegisterComponent))
