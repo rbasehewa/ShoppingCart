@@ -28,3 +28,21 @@
 .container{
   display: flex;
 }
+
+
+@media (max-width: 500px) {
+  
+  // .card-top{
+  //   display:none;
+  // }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-cart{
+    display: none;
+  }
+
+}
