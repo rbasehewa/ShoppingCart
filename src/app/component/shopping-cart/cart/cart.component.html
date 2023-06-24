@@ -2,9 +2,23 @@
 </div>
 
 <ul *ngIf="cartItems.length > 0" class="list-group">
-  <li class="list-group-item" *ngFor="let item of cartItems">
-    <app-cart-item [cartItem]="item"></app-cart-item>
+  <li class="list-group-item">
+    <table>
+      <thead>
+        <app-cart-table-header></app-cart-table-header> <!-- Include the table header component here -->
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td>{{ item.productName }}</td>
+          <td>{{ item.qty }}</td>
+          <td>
+            <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </li>
+
   <li class="list-group-item d-flex justify-content-between active">
     <strong>Total :</strong>{{ cartTotal$ | async | currency: 'AUD'}}
   </li>

@@ -19,6 +19,7 @@ import { PageNotFoundComponent } from './component/shared/page-not-found/page-no
 import { CheckoutComponent } from './component/shopping-cart/checkout/checkout.component';
 import { StoreModule } from '@ngrx/store';
 import { cartReducer } from './cart.reducer';
+import { CartTableHeaderComponent } from './component/shopping-cart/cart/cart-table-header/cart-table-header.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { cartReducer } from './cart.reducer';
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    CartTableHeaderComponent
   ],
   imports: [
     BrowserModule,
