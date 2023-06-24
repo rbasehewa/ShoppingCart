@@ -1,3 +1,11 @@
 .list-group{
     border: 1px solid;
 }
+
+.cart-item-row td {
+    padding-right: 10px; /* Adjust the spacing as needed */
+  }
+  
+  .cart-item-row td:last-child {
+    padding-right: 0; /* Remove the right padding for the last column */
+  }
