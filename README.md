@@ -2,6 +2,10 @@
 
 This project was generated with Angular 12 and using NgRx Component Store.
 
+
+ - Note (Angular 13 migrations applied)
+  - using migration only key word from = version to = version (angular core and angular cli)
+
 ## How to use this project
 
 - Open a terminal in the project folder.
